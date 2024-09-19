@@ -1,27 +1,26 @@
-﻿int placa = 0;
+﻿int placa;
 string color;
 
-Console.WriteLine("Ingrese los colores de las placas");
-color = Console.ReadLine().ToUpper().Trim();
-while (color == "F")
+Console.WriteLine("Ingrese el ultimo digito de las placas (Termine ingresando: F)");
+
+
+while (placa )
 {
-    color = Console.ReadLine().ToUpper().Trim();
-    if (color == "VERDE")
+    placa = Convert.ToInt32(Console.ReadLine());
+    if (placa > 0 && placa <3)
     {
-        for (placa++; placa < 3 && placa > 0;) ;
+        color = "Verde";
     }
-    else if (color == "AZUL")
+    if (placa > 3 && placa < 7)
     {
-        for (placa++ ; placa < 6 && placa > 4;) ;
+        color = "Azul";
     }
-    else if (color == "ROJO")
+    if (placa > 6 && placa < 10)
     {
-        for (placa++ ; placa > 7 && placa < 9;) ;
+        color = "Rojo";
     }
-   
-        
-        for (Console.WriteLine($"{placa++}, "); color == "F";);
-        
-    
+
+    Console.WriteLine($"{color}, ");
 }
+
 Console.ReadKey();
